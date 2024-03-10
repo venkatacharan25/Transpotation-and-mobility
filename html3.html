@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental</title>
+    <link rel="stylesheet" href="html3.css">
+</head>
+<body>
+    <h1>Easy Ride</h1>
+    <h2>Rental</h2>
+    <div class="background-container">
+        <div class="container">
+            <center>
+            <div class="ride-options">
+                <div class="ride-option">
+                    <h3>BOOK A BIKE</h3>
+                    <form id="BookBike">
+                        <button type="submit">Book</button>
+                    </form>
+                </div>
+                <div class="ride-option">
+                    <h3>GIVE A BIKE</h3>
+                    <form id="GiveBike">
+                        <button type="submit">Take</button>
+                    </form>
+                </div>
+            </div>
+            </center>
+        </div>
+    </div>
+    <script>
+        document.getElementById('BookBike').addEventListener('submit', function(event) {
+           event.preventDefault(); // Prevent form submission
+           window.location.href = 'h6.html'; // Redirect to h6.html
+       });
+       document.getElementById('GiveBike').addEventListener('submit', function(event) {
+           event.preventDefault(); // Prevent form submission
+           window.location.href = 'h7.html'; // Redirect to h7.html
+       });
+   </script>
+</body>
+</html>

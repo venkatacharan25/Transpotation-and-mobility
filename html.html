@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Way - Login</title>
+    <link rel="stylesheet" href="html.css" >
+    <link rel="icon" href="/hackathon.html/pic.png">
+</head>
+<body>
+    
+    <div class="background-container">
+        
+        <div class="container">
+            <div style="float:right "><img src="/hackathon.html/img.png"></div>
+            <div class="login-container" id="loginContainer">
+                <form class="login-form" id="loginForm" method="post" action="connect.php">  <!-- Added id to form -->
+                    
+                    <h1>Login</h1>
+                    <div class="input-container">
+                        <input type="text" placeholder="Username" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="glow-on-hover">Login</button>
+                </form>
+                <div class="register-link">
+                    <p>New Register? <a href="#" onclick="showRegister()">Click here</a></p>
+                </div>
+            </div>
+      
+            <div class="register-container hidden" id="registerContainer">
+                <form class="register-form">
+                    <h1>Register</h1>
+                    <div class="input-container">
+                        <input type="text" placeholder="Phone Number" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" placeholder="Enter Password" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" placeholder="Re-enter Password" required>
+                    </div>
+                    <button type="submit" onclick="alert('You have registered successfully')" class="glow-on-hover">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showRegister() {
+            document.getElementById('loginContainer').classList.add('hidden');
+            document.getElementById('registerContainer').classList.remove('hidden');
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = 'html1.html'; // Redirect to html1.html
+        });
+    </script>
+</body>
+</html>

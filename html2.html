@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooling</title>
+    <link rel="stylesheet" href="html2.css">
+</head>
+<body>
+    <h1>Easy Ride</h1>
+    <h2>Pooling</h2>
+    <div class="background-container">
+        
+        <div class="container">
+            
+            
+            <div class="ride-options">
+                <div class="ride-option">
+                    <h3>OFFER A RIDE</h3>
+                    <form id="OfferRide">
+                    <button>Offer</button>
+                    </form>
+                </div>
+                <div class="ride-option">
+                    <h3>TAKE A RIDE</h3>
+                    <form id="TakeRide">
+                    <button>Take</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+         document.getElementById('OfferRide').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = 'h4.html'; // Redirect to html2.html
+        });
+        document.getElementById('TakeRide').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = 'h5.html'; // Redirect to html2.html
+        });
+    </script>
+</body>
+</html>

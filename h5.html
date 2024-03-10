@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request a Ride</title>
+<link rel="stylesheet" href="h5.css">
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Request a Ride</h2>
+  <form action="#" method="post" id="ride-request-form" >
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="starting-location">Pickup Location:</label>
+    <input type="text" id="Starting location" name="Starting location" required>
+    
+    <label for="destination">Destination:</label>
+    <input type="text" id="destination" name="destination" required>
+    
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+    
+    <label for="num-male-passengers">Number of Male Passengers (M):</label>
+    <input type="number" id="num-male-passengers" name="num-male-passengers" min="0" required>
+    
+    <label for="num-female-passengers">Number of Female Passengers (F):</label>
+    <input type="number" id="num-female-passengers" name="num-female-passengers" min="0" required>
+    
+    <input type="submit" onclick="alert('Your details has recorded,We will find ur partner as soon as possible')" value="Request Ride">
+  </form>
+  
+  <div id="passenger-count"></div>
+</div>
+
+<script>
+  
+         document.getElementById('ride-request-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = 'html.html'; // Redirect to html2.html
+        });
+
+  // Get form elements
+  const form = document.getElementById('ride-request-form');
+  const malePassengersInput = document.getElementById('num-male-passengers');
+  const femalePassengersInput = document.getElementById('num-female-passengers');
+  const passengerCount = document.getElementById('passenger-count');
+
+  // Event listener for form submission
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Get number of male and female passengers
+    const numMalePassengers = parseInt(malePassengersInput.value);
+    const numFemalePassengers = parseInt(femalePassengersInput.value);
+    
+    // Update passenger count display
+    passengerCount.innerHTML = `
+      <p>Number of Male Passengers (M): ${numMalePassengers}</p>
+      <p>Number of Female Passengers (F): ${numFemalePassengers}</p>
+    `;
+  });
+</script>
+
+</body>
+</html>

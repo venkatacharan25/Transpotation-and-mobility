@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.background-container {
+    background-image: url('https://datarespons.com/wp-content/uploads/Car-sharing-App.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    background-color: rgb(194, 239, 245);
+    margin-top: 0;
+    margin-bottom: 0px;
+    color: #333;
+}
+
+h2 {
+    background-color: rgb(194, 239, 245);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #333;
+}
+
+.ride-options {
+    display: flex;
+    justify-content: center;
+}
+
+.ride-option {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 60px; /* Adjusted padding */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-right: 20px;
+}
+
+.ride-option:last-child {
+    margin-right: 0;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}

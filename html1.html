@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooling</title>
+    <link rel="stylesheet" href="html1.css">
+</head>
+<body>
+    <header>
+        <h1>Easy Way</h1>
+    </header>
+
+    <center>
+        <div class="polling-container">
+            <h2>Pooling</h2>
+            <p>Find or offer a ride</p>
+            <form id="poolingForm"> <!-- Added id to form -->
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </center>
+
+    <center>
+        <div class="rental-container">
+            <h2>Rental</h2>
+            <p>Find or offer a rental</p>
+            <form id="rentalForm">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </center>
+
+    <script>
+        document.getElementById('poolingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = 'html2.html'; // Redirect to html2.html
+        });
+        document.getElementById('rentalForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            window.location.href = 'html3.html'; // Redirect to html2.html
+        });
+    </script>
+</body>
+</html>

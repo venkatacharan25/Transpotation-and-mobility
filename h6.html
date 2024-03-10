@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rent a Bike</title>
+<link rel="stylesheet" href="h6.css">
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Rent a Bike</h2>
+  <form action="#" method="post" id="bike-rental-form" >
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="phone-number">Phone Number:</label>
+    <input type="tel" id="phone-number" name="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+
+    
+    <label for="bike-type">Bike Type:</label>
+    <select id="bike-type" name="bike-type" required>
+      <option value="">Select Bike Type</option>
+      <option value="mountain">Mountain Bike</option>
+      <option value="road">Road Bike</option>
+      <option value="hybrid">Hybrid Bike</option>
+      <option value="bmx">BMX Bike</option>
+    </select>
+    
+    <label for="rental-duration">Rental Duration (in days):</label>
+    <input type="number" id="rental-duration" name="rental-duration" min="1" required>
+    
+    <input type="submit" onclick="alert('Your details has recorded,We will find ur partner as soon as possible')" value="Rent Now">
+  </form>
+</div>
+<script>
+    document.getElementById('bike-rental-form').addEventListener('submit', function(event) {
+       event.preventDefault(); // Prevent form submission
+       window.location.href = 'html.html'; // Redirect to html2.html
+   });
+</script>
+</body>
+</html>
